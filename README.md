@@ -21,4 +21,4 @@ Also, Standard version means **no .NET support**.
 This project it's begin developed with official permission from the original creator of MMM (Erilab / Erickseen).
 
 # Warning 
-This repository it's a reworked version of the project, the legacy one can be found here: 
+This repository it's a reworked version of the project, the legacy one can be found here: https://github.com/OstTanako/-LEGACY-Muito-Muito-Minimalista-PLUS
