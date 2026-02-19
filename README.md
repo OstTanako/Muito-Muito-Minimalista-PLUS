@@ -1,5 +1,5 @@
 **Muito, Muito Minimalista: PLUS** is a arcade spinoff project based on the original game **Muito, Muito Minimalista**.
-This spinoff not only port the levels to an engine but also upgrade the art and add new mechanics and restructures the basic mechanics.
+This spinoff upgrade the art and add new mechanics and restructures the basic mechanics. (the new art its not canonical)
 
 **ℹ️ • A discord server is actually on WIP**
 
