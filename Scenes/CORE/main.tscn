@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://4p2ceslugh6t"]
+
+[ext_resource type="PackedScene" uid="uid://pqlhxyt48va1" path="res://Scenes/Debug Only/Test Area/test_area.tscn" id="1_osg1g"]
+[ext_resource type="PackedScene" uid="uid://nab736ipl7xc" path="res://Scenes/Gameplay/Prefabs/Player Properties/player.tscn" id="2_q7c4t"]
+
+[node name="Main" type="Node" unique_id=278566212]
+
+[node name="TestArea" parent="." unique_id=1278744257 instance=ExtResource("1_osg1g")]
+position = Vector2(600, 576)
+
+[node name="Player" parent="." unique_id=1635030719 instance=ExtResource("2_q7c4t")]
+position = Vector2(616, 288)

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://nab736ipl7xc"]
+
+[ext_resource type="Script" uid="uid://bvdrb35pcthvg" path="res://Scripts/Gameplay/Player Scripts/player.gd" id="1_75r5e"]
+[ext_resource type="Texture2D" uid="uid://c5oe1mhe28ndp" path="res://Millaceanous Files/icon.svg" id="1_cpoc8"]
+[ext_resource type="Script" uid="uid://cu612okpjpije" path="res://addons/trail_2d/trail_2d.gd" id="2_xwxuq"]
+[ext_resource type="Script" uid="uid://b7nymc2wyje7y" path="res://Scripts/Node Components/custom_camera.gd" id="3_4ke1v"]
+
+[sub_resource type="Gradient" id="Gradient_xwxuq"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75r5e"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ke1v"]
+radius = 35.77709
+
+[node name="Player" type="CharacterBody2D" unique_id=1635030719]
+collision_layer = 2
+collision_mask = 16
+script = ExtResource("1_75r5e")
+
+[node name="Trail2D" type="Line2D" parent="." unique_id=109096941]
+z_index = -1
+width = 64.0
+gradient = SubResource("Gradient_xwxuq")
+script = ExtResource("2_xwxuq")
+length = 32
+metadata/_custom_type_script = "uid://cu612okpjpije"
+
+[node name="Player Character" type="Sprite2D" parent="." unique_id=426164853]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cpoc8")
+
+[node name="Collisor" type="CollisionShape2D" parent="." unique_id=1592051845]
+shape = SubResource("RectangleShape2D_75r5e")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[node name="Hurt Box" type="Area2D" parent="." unique_id=1656789016]
+collision_layer = 2
+collision_mask = 4
+
+[node name="HurtBox Colisor" type="CollisionShape2D" parent="Hurt Box" unique_id=329351439]
+shape = SubResource("CircleShape2D_4ke1v")
+debug_color = Color(0.99999994, 0.0011185105, 0.0992332, 0.41960785)
+
+[node name="CustomCamera" type="Camera2D" parent="." unique_id=682850061]
+script = ExtResource("3_4ke1v")
+metadata/_custom_type_script = "uid://b7nymc2wyje7y"
+
+[node name="Dash Timer" type="Timer" parent="." unique_id=890018932]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Dash Timer" to="." method="_dash_timedout"]
